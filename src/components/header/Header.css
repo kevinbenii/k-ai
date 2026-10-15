@@ -1,3 +1,28 @@
-.main-header h1 {color: blue;}
+.main-header {
+    background: var(--main-color);
+    position:relative;
+    min-height:70px;
+    border-radius:5px 5px 0 0;
+}
 
-#logo
+.main-header h1 {
+    color:white;
+    margin:0;
+    text-align: center;
+    line-height:70px;
+}
+
+#logo {
+    max-width:100px;
+    padding:15px;
+    display:block;
+    margin:auto;
+}
+
+@media only screen and (min-width: 768px) {
+    #logo {
+        position:absolute;
+        top:0;
+        left:0;
+    }
+}
