@@ -1,0 +1,28 @@
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+/* Logo image */
+.logo .logo-mark {
+    width: 80px;
+    height: 64px;
+    object-fit: contain;
+}
+
+/* Logo text */
+.logo .logo-text {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .logo .logo-mark {
+        width: 107px;
+        height: 86px;
+    }
+}
