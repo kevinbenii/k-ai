@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/k-ai/static/css/main.0b51e107.css",
+    "main.js": "/k-ai/static/js/main.77616049.js",
+    "static/media/logo.png": "/k-ai/static/media/logo.14b0d2a62afdfd1f5218.png",
+    "index.html": "/k-ai/index.html",
+    "main.0b51e107.css.map": "/k-ai/static/css/main.0b51e107.css.map",
+    "main.77616049.js.map": "/k-ai/static/js/main.77616049.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b51e107.css",
+    "static/js/main.77616049.js"
+  ]
+}
