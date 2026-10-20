@@ -1,13 +1,15 @@
 import "./Header.css";
-import logo from "./images/logo.jpg";
+import Logo from "../logo/Logo";
 import Navigation from "../navigation/Navigation";
 
+// Header
 const Header = () => {
     return (
-        <header className="main-header">
-            <img id="logo" src={logo} alt="Cherry" />
-            <h1>Finding A Home</h1>
-            <Navigation />
+        <header className="site-header">
+            <div className="container site-header-inner">
+                <Logo />
+                <Navigation />
+            </div>
         </header>
     );
 };
