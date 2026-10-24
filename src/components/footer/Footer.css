@@ -1,0 +1,77 @@
+/* Footer */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    padding: 48px 0 30px;
+}
+
+/* Footer columns */
+.site-footer .footer-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Footer logo */
+.site-footer .logo {
+    margin-bottom: 12px;
+}
+
+.site-footer .logo-mark {
+    width: 113px;
+    height: 94px;
+}
+
+/* Tagline */
+.site-footer .footer-tagline {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+}
+
+/* Link column */
+.site-footer .footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.site-footer .footer-col a {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+}
+
+.site-footer .footer-col a:hover {
+    color: var(--color-text);
+}
+
+/* Column title */
+.site-footer .footer-col-title {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-muted);
+    letter-spacing: 0.03em;
+}
+
+/* Copyright */
+.site-footer .footer-bottom {
+    padding-top: 22px;
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+}
+
+/* Medium screens */
+@media only screen and (min-width: 768px) {
+    .site-footer .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+/* Larger screens */
+@media only screen and (min-width: 900px) {
+    .site-footer .footer-top {
+        grid-template-columns: 1.6fr 1fr 1fr;
+    }
+}
