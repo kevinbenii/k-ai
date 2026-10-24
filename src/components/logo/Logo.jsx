@@ -1,13 +1,14 @@
 import "./Logo.css";
 import logo from "./images/logo.png";
+import { Link } from "react-router-dom";
 
 // Logo
 const Logo = () => {
     return (
-        <a href="#home" className="logo">
+        <Link to="/" className="logo">
             <img src={logo} alt="K·AI logo" className="logo-mark" />
             <span className="logo-text">K·AI</span>
-        </a>
+        </Link>
     );
 };
 
