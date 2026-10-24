@@ -1,0 +1,57 @@
+/* Hero */
+.hero {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    text-align: center;
+}
+
+/* Title */
+.hero .hero-title {
+    font-size: 2rem;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* Subtitle */
+.hero .hero-subhead {
+    font-size: 1.0625rem;
+    color: var(--color-muted);
+    max-width: 560px;
+    margin: 24px auto 0;
+}
+
+/* Buttons */
+.hero .cta-row {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+/* Small screens */
+@media only screen and (min-width: 421px) {
+    .hero .cta-row {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .hero {
+        padding-top: 90px;
+        padding-bottom: 70px;
+    }
+
+    .hero .hero-title {
+        font-size: clamp(2rem, 5vw, 3.25rem);
+    }
+}
+
+/* Extra large screens */
+@media only screen and (min-width: 1600px) {
+    .hero .hero-title {
+        font-size: 3.5rem;
+    }
+}
