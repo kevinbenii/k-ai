@@ -1,0 +1,52 @@
+/* Hub diagram */
+.hub {
+    max-width: 620px;
+    margin: 0 auto;
+    padding-bottom: 56px;
+}
+
+.hub .hub-diagram {
+    width: 100%;
+    height: auto;
+}
+
+/* Category circles */
+.hub .hub-node {
+    cursor: pointer;
+}
+
+.hub .hub-node circle {
+    transition: stroke 0.15s ease;
+}
+
+.hub .hub-node:hover circle {
+    stroke: var(--color-accent);
+}
+
+.hub .hub-node:hover .hub-node-label {
+    fill: var(--color-text);
+}
+
+/* Circle labels */
+.hub .hub-node-label {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    fill: var(--color-muted);
+    text-transform: uppercase;
+}
+
+/* Center label */
+.hub .hub-node-label--center {
+    font-size: 11px;
+    font-weight: 700;
+    fill: var(--color-text);
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .hub {
+        padding-bottom: 70px;
+    }
+}
