@@ -1,0 +1,33 @@
+/* How it works section */
+.how-it-works {
+    padding: 20px 0 56px;
+}
+
+/* Heading */
+.how-it-works h2 {
+    font-size: 1.875rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Steps grid */
+.how-it-works .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .how-it-works .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .how-it-works {
+        padding-bottom: 70px;
+    }
+}
