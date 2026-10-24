@@ -1,0 +1,49 @@
+/* Tool card */
+.tool-card {
+    display: block;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 14px;
+    padding: 26px 22px;
+}
+
+/* Image */
+.tool-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-bottom: 14px;
+}
+
+/* Category label */
+.tool-card .tool-tag {
+    display: block;
+    font-size: 0.71875rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Name */
+.tool-card h3 {
+    font-size: 1.1875rem;
+    font-weight: 500;
+    line-height: 1.29;
+    margin-bottom: 6px;
+}
+
+/* Description */
+.tool-card p {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+}
+
+/* Price and platform */
+.tool-card .tool-meta {
+    margin-top: 10px;
+    font-size: 0.8125rem;
+}
