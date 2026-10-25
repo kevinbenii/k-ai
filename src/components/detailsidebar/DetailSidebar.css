@@ -1,0 +1,36 @@
+/* Sidebar */
+.detail-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* Title */
+.detail-sidebar span {
+    width: 100%;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-muted);
+}
+
+/* Links */
+.detail-sidebar a {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+}
+
+.detail-sidebar a:hover,
+.detail-sidebar a.current {
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 900px) {
+    .detail-sidebar {
+        flex-direction: column;
+        gap: 16px;
+        position: sticky;
+        top: 140px;
+    }
+}
