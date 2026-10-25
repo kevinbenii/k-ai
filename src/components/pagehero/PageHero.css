@@ -1,0 +1,35 @@
+/* Page title area */
+.page-hero {
+    padding: 48px 0 20px;
+    text-align: center;
+}
+
+/* Label */
+.page-hero .eyebrow {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    margin-bottom: 16px;
+}
+
+/* Title */
+.page-hero h1 {
+    font-size: 1.75rem;
+}
+
+/* Subtitle */
+.page-hero p {
+    color: var(--color-muted);
+    margin-top: 16px;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .page-hero {
+        padding-top: 70px;
+    }
+
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+}
