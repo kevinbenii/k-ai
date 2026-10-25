@@ -1,0 +1,38 @@
+/* Banner section */
+.cta {
+    padding: 60px 0;
+}
+
+/* Banner */
+.cta .cta-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: 32px 24px;
+}
+
+/* Title */
+.cta h2 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+/* Text */
+.cta p {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .cta .cta-banner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 44px 50px;
+    }
+}
