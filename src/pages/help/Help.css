@@ -1,0 +1,55 @@
+/* Sections */
+#help .help-section {
+    padding: 20px 0 60px;
+}
+
+/* Headings */
+#help h2 {
+    font-size: 1.875rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* How it works */
+#help .steps {
+    text-align: center;
+}
+
+#help .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 36px;
+}
+
+/* Good tool cards */
+#help .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* FAQ */
+#help .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid var(--color-border);
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    #help .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #help .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Extra large screens */
+@media only screen and (min-width: 1150px) {
+    #help .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
