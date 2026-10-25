@@ -9,6 +9,7 @@ import EducationAndResearch from './pages/educationandresearch/EducationAndResea
 import CodingAndTechnology from './pages/codingandtechnology/CodingAndTechnology';
 import BusinessAndProductivity from './pages/businessandproductivity/BusinessAndProductivity';
 import WritingAndCreativity from './pages/writingandcreativity/WritingAndCreativity';
+import Help from './pages/help/Help';
 
 // Pages
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="coding" element={<CodingAndTechnology />} />
           <Route path="business" element={<BusinessAndProductivity />} />
           <Route path="writing" element={<WritingAndCreativity />} />
+          <Route path="help" element={<Help />} />
         </Route>
       </Routes>
     </HashRouter>
