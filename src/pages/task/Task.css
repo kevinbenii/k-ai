@@ -1,0 +1,50 @@
+/* Page layout */
+#task .detail-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+/* Intro text */
+#task .intro {
+    margin-top: 24px;
+    line-height: 1.65;
+}
+
+/* Sections */
+#task .detail-section {
+    margin-top: 56px;
+}
+
+#task .detail-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 22px;
+}
+
+/* Card grid */
+#task .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 900px) {
+    #task .detail-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #task .detail-sidebar {
+        flex: 0 0 220px;
+    }
+
+    #task .detail-content {
+        flex: 1;
+    }
+
+    #task .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
