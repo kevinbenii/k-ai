@@ -1,0 +1,12 @@
+/* Check item */
+.check-item {
+    display: flex;
+    gap: 12px;
+    font-size: 0.9375rem;
+}
+
+/* Check mark */
+.check-item span {
+    color: var(--color-accent);
+    font-weight: 700;
+}
