@@ -4,7 +4,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Layout from './Layout';
 import Home from './pages/home/Home';
-import Directory from './pages/directory/Directory';
+import AIDirectory from './pages/aidirectory/AIDirectory';
 
 // Pages
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="directory" element={<Directory />} />
+          <Route path="directory" element={<AIDirectory />} />
         </Route>
       </Routes>
     </HashRouter>
