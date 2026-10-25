@@ -7,6 +7,7 @@ import HowItWorks from "../../components/howitworks/HowItWorks";
 import Founder from "../../components/founder/Founder";
 import WhyKai from "../../components/whykai/WhyKai";
 import Testimonials from "../../components/testimonials/Testimonials";
+import CtaBanner from "../../components/ctabanner/CtaBanner";
 
 // Home page
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
             <Founder />
             <WhyKai />
             <Testimonials />
+            <CtaBanner />
         </div>
     );
 };
