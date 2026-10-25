@@ -1,0 +1,23 @@
+/* Quote card */
+.quote-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 26px 22px;
+}
+
+/* Quote */
+.quote-card p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-muted);
+}
+
+/* Name */
+.quote-card span {
+    display: block;
+    margin-top: 14px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #33d6c0;
+}
