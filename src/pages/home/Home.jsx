@@ -6,6 +6,7 @@ import Tools from "../../components/tools/Tools";
 import HowItWorks from "../../components/howitworks/HowItWorks";
 import Founder from "../../components/founder/Founder";
 import WhyKai from "../../components/whykai/WhyKai";
+import Testimonials from "../../components/testimonials/Testimonials";
 
 // Home page
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
             <HowItWorks />
             <Founder />
             <WhyKai />
+            <Testimonials />
         </div>
     );
 };
