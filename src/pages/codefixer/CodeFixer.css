@@ -1,0 +1,50 @@
+/* Page layout */
+#codefixer .detail-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+/* Intro text */
+#codefixer .intro {
+    margin-top: 24px;
+    line-height: 1.65;
+}
+
+/* Sections */
+#codefixer .detail-section {
+    margin-top: 56px;
+}
+
+#codefixer .detail-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 22px;
+}
+
+/* Card grid */
+#codefixer .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 900px) {
+    #codefixer .detail-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #codefixer .detail-sidebar {
+        flex: 0 0 220px;
+    }
+
+    #codefixer .detail-content {
+        flex: 1;
+    }
+
+    #codefixer .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
