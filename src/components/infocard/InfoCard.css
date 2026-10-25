@@ -1,0 +1,20 @@
+/* Info card */
+.info-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 26px 22px;
+}
+
+/* Title */
+.info-card h3 {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+/* Description */
+.info-card p {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+}
