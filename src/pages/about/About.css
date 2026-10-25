@@ -1,0 +1,124 @@
+/* Sections */
+#about .about-section {
+    padding: 20px 0 60px;
+}
+
+/* Headings */
+#about h2 {
+    font-size: 1.875rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Founder and story */
+#about .about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Founder card */
+#about .founder-card {
+    max-width: 320px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: 26px;
+}
+
+#about .founder-card img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 18px;
+}
+
+#about .founder-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+}
+
+#about .founder-card .role {
+    color: #33d6c0;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+#about .founder-card p {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+}
+
+/* Story */
+#about .story h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+#about .story p {
+    color: var(--color-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* Quote */
+#about .quote-block {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+}
+
+#about .quote-block p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about .quote-block cite {
+    display: block;
+    margin-top: 18px;
+    color: var(--color-muted);
+    font-size: 0.875rem;
+    font-style: normal;
+}
+
+/* Card grids */
+#about .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Video text */
+#about .video-text h3 {
+    font-size: 1.0625rem;
+    margin-bottom: 6px;
+}
+
+#about .video-text p {
+    color: var(--color-muted);
+}
+
+/* Larger screens */
+@media only screen and (min-width: 900px) {
+    #about .about-grid {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    #about .founder-card {
+        flex: 0 0 300px;
+    }
+
+    #about .quote-block {
+        padding: 48px 50px;
+    }
+
+    #about .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
