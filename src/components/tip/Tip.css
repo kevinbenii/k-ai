@@ -1,0 +1,18 @@
+/* Tip */
+.tip {
+    display: flex;
+    gap: 12px;
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+}
+
+/* Dot */
+.tip::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #33d6c0;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
