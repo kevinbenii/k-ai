@@ -1,0 +1,105 @@
+/* Sections */
+#business .cat-section {
+    padding: 20px 0 60px;
+}
+
+/* Headings */
+#business h2 {
+    font-size: 1.875rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Tools */
+#business .tool-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* Output */
+#business .output {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#business .output h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 0;
+}
+
+#business .checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Use cases */
+#business .use-cases h2 {
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+#business .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Tips */
+#business .tips-box {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: 32px 24px;
+}
+
+#business .tips-box h3 {
+    font-size: 1.125rem;
+    margin-bottom: 16px;
+}
+
+#business .tips-box ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Other categories */
+#business .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    #business .tool-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #business .output {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    #business .output h2 {
+        width: 200px;
+    }
+
+    #business .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #business .tips-box {
+        padding: 32px 36px;
+    }
+}
