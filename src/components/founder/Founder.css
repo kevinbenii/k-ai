@@ -1,0 +1,58 @@
+/* Founder section */
+.founder {
+    padding: 20px 0 60px;
+}
+
+.founder .founder-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Label */
+.founder .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* Heading */
+.founder h2 {
+    font-size: 1.6rem;
+    margin: 14px 0;
+}
+
+/* Text */
+.founder p {
+    color: var(--color-muted);
+}
+
+/* Name card */
+.founder .founder-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--color-surface);
+    border-radius: 20px;
+    padding: 26px;
+}
+
+/* Photo */
+.founder .founder-card img {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 900px) {
+    .founder .founder-grid {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .founder .founder-card {
+        min-width: 260px;
+    }
+}
