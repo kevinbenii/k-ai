@@ -1,0 +1,31 @@
+/* Value card */
+.value-card .icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: rgba(124, 92, 252, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+/* Blue dot */
+.value-card .icon-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #2563eb;
+}
+
+/* Title */
+.value-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 6px;
+}
+
+/* Description */
+.value-card p {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+}
