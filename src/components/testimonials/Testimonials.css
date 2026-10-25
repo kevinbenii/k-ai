@@ -1,0 +1,29 @@
+/* Testimonials section */
+.testimonials {
+    padding: 20px 0 60px;
+}
+
+/* Heading */
+.testimonials h2 {
+    font-size: 1.875rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Cards */
+.testimonials .card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .testimonials .card-grid {
+        flex-direction: row;
+    }
+
+    .testimonials .quote-card {
+        flex: 1;
+    }
+}
