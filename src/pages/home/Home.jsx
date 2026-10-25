@@ -5,6 +5,7 @@ import Categories from "../../components/categories/Categories";
 import Tools from "../../components/tools/Tools";
 import HowItWorks from "../../components/howitworks/HowItWorks";
 import Founder from "../../components/founder/Founder";
+import WhyKai from "../../components/whykai/WhyKai";
 
 // Home page
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
             <Tools />
             <HowItWorks />
             <Founder />
+            <WhyKai />
         </div>
     );
 };
