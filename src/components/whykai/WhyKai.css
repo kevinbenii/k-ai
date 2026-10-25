@@ -1,0 +1,29 @@
+/* Why K·AI section */
+.why-kai {
+    padding: 20px 0 60px;
+}
+
+/* Heading */
+.why-kai h2 {
+    font-size: 1.875rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Cards */
+.why-kai .value-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .why-kai .value-grid {
+        flex-direction: row;
+    }
+
+    .why-kai .value-card {
+        flex: 1;
+    }
+}
