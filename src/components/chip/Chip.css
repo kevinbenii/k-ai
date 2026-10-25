@@ -1,0 +1,17 @@
+/* Chip */
+.chip {
+    padding: 9px 18px;
+    border-radius: 999px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-muted);
+    font-size: 0.8125rem;
+}
+
+/* Highlighted chip */
+.chip.active {
+    background: rgba(124, 92, 252, 0.16);
+    border-color: var(--color-accent);
+    color: var(--color-text);
+    font-weight: 600;
+}
