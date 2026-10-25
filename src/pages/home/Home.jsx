@@ -4,6 +4,7 @@ import About from "../../components/about/About";
 import Categories from "../../components/categories/Categories";
 import Tools from "../../components/tools/Tools";
 import HowItWorks from "../../components/howitworks/HowItWorks";
+import Founder from "../../components/founder/Founder";
 
 // Home page
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <Categories />
             <Tools />
             <HowItWorks />
+            <Founder />
         </div>
     );
 };
