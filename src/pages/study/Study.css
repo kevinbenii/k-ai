@@ -1,0 +1,50 @@
+/* Page layout */
+#study .detail-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+/* Intro text */
+#study .intro {
+    margin-top: 24px;
+    line-height: 1.65;
+}
+
+/* Sections */
+#study .detail-section {
+    margin-top: 56px;
+}
+
+#study .detail-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 22px;
+}
+
+/* Card grid */
+#study .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 900px) {
+    #study .detail-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #study .detail-sidebar {
+        flex: 0 0 220px;
+    }
+
+    #study .detail-content {
+        flex: 1;
+    }
+
+    #study .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
