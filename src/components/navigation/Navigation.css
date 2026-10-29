@@ -3,13 +3,56 @@
     width: 100%;
 }
 
-/* Menu list */
-.main-nav ul {
+/* Toggle button */
+.main-nav .nav-toggle {
+    position: absolute;
+    top: 26px;
+    right: var(--container-pad);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+/* Toggle lines */
+.main-nav .nav-toggle span {
+    width: 20px;
+    height: 2px;
+    background: var(--color-text);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Lines turn into an X */
+.main-nav .nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.main-nav .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.main-nav .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Menu list (hidden until toggled) */
+.main-nav ul {
+    display: none;
     flex-direction: column;
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+.main-nav ul.open {
+    display: flex;
 }
 
 /* Menu items */
@@ -58,7 +101,12 @@
         width: auto;
     }
 
+    .main-nav .nav-toggle {
+        display: none;
+    }
+
     .main-nav ul {
+        display: flex;
         flex-direction: row;
         align-items: center;
         gap: 32px;
