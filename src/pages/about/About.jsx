@@ -3,6 +3,7 @@ import PageHero from "../../components/pagehero/PageHero";
 import InfoCard from "../../components/infocard/InfoCard";
 import NumberedCard from "../../components/numberedcard/NumberedCard";
 import CtaBanner from "../../components/ctabanner/CtaBanner";
+import Video from "../../components/video/Video";
 
 // About page
 const About = () => {
@@ -66,10 +67,10 @@ const About = () => {
             <section className="about-section">
                 <div className="container">
                     <h2>Featured video</h2>
-                    <div className="video-text">
-                        <h3>AI</h3>
-                        <p>A short video on AI, Machine Learning, Deep Learning and Generative AI explained.</p>
-                    </div>
+                    <Video
+                        src="https://www.youtube.com/embed/qYNweeDHiyU"
+                        title="AI"
+                        description="A short video on AI, Machine Learning, Deep Learning and Generative AI explained." />
                 </div>
             </section>
 

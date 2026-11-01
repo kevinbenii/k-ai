@@ -92,16 +92,6 @@
     gap: 20px;
 }
 
-/* Video text */
-#about .video-text h3 {
-    font-size: 1.0625rem;
-    margin-bottom: 6px;
-}
-
-#about .video-text p {
-    color: var(--color-muted);
-}
-
 /* Larger screens */
 @media only screen and (min-width: 900px) {
     #about .about-grid {
