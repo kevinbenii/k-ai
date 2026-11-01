@@ -1,0 +1,41 @@
+/* Video section */
+.video {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Title */
+.video h3 {
+    font-size: 1.0625rem;
+    margin-bottom: 6px;
+}
+
+/* Description */
+.video p {
+    color: var(--color-muted);
+}
+
+/* Video frame */
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 14px;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 900px) {
+    .video {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .video .video-text {
+        flex: 1;
+    }
+
+    .video iframe {
+        flex: 1.5;
+    }
+}
