@@ -4,6 +4,7 @@ import PageHero from "../../components/pagehero/PageHero";
 import StepCard from "../../components/stepcard/StepCard";
 import NumberedCard from "../../components/numberedcard/NumberedCard";
 import FaqItem from "../../components/faqitem/FaqItem";
+import ContactForm from "../../components/contactform/ContactForm";
 
 // Help page
 const Help = () => {
@@ -53,6 +54,7 @@ const Help = () => {
             <section className="help-section">
                 <div className="container">
                     <h2>Still stuck? Contact us</h2>
+                    <ContactForm />
                 </div>
             </section>
         </div>
