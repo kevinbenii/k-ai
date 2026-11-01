@@ -1,19 +1,16 @@
 import "./ContactForm.css";
-import { useState } from "react";
+import toast from "react-hot-toast";
 
 // Contact form (sends through Web3Forms without leaving the page)
 const ContactForm = () => {
-    // Message shown under the button
-    const [result, setResult] = useState("");
-    const [status, setStatus] = useState("");
-
     const onSubmit = async (event) => {
         event.preventDefault();
-        setStatus("");
-        setResult("Sending...");
 
         const form = event.target;
         const formData = new FormData(form);
+
+        // Pop-up while sending (React Hot Toast)
+        const sending = toast.loading("Sending...");
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -23,16 +20,13 @@ const ContactForm = () => {
             const data = await response.json();
 
             if (data.success) {
-                setStatus("success");
-                setResult("Thanks! Your message was sent.");
+                toast.success("Thanks! Your message was sent.", { id: sending });
                 form.reset();
             } else {
-                setStatus("error");
-                setResult("Sorry, your message could not be sent. Please try again.");
+                toast.error("Sorry, your message could not be sent. Please try again.", { id: sending });
             }
         } catch (error) {
-            setStatus("error");
-            setResult("Sorry, your message could not be sent. Please try again.");
+            toast.error("Sorry, your message could not be sent. Please try again.", { id: sending });
         }
     };
 
@@ -75,10 +69,7 @@ const ContactForm = () => {
                 <textarea id="message" name="message" placeholder="How can we help?" required minLength="10"></textarea>
             </div>
 
-            <div className="form-actions">
-                <button type="submit" className="btn btn-primary">Send message</button>
-                <p className={"form-result " + status} role="status">{result}</p>
-            </div>
+            <button type="submit" className="btn btn-primary">Send message</button>
         </form>
     );
 };

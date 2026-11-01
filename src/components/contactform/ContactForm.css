@@ -50,28 +50,10 @@
     resize: vertical;
 }
 
-/* Button and result */
-.contact-form .form-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 14px;
-}
-
+/* Button */
 .contact-form button {
+    align-self: flex-start;
     cursor: pointer;
-}
-
-.contact-form .form-result {
-    font-size: 0.875rem;
-}
-
-.contact-form .form-result.success {
-    color: #2e9e6b;
-}
-
-.contact-form .form-result.error {
-    color: #e5484d;
 }
 
 /* Larger screens */
