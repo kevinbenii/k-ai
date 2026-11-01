@@ -1,0 +1,57 @@
+/* Slide (hidden unless active) */
+.slide {
+    display: none;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.slide.active {
+    display: flex;
+    animation: fade 0.5s ease;
+}
+
+/* Fade in */
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Image */
+.slide img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* Category label */
+.slide .tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-muted);
+}
+
+/* Name */
+.slide h3 {
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+/* Description */
+.slide p {
+    color: var(--color-muted);
+    margin-bottom: 20px;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .slide.active {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .slide img {
+        width: 55%;
+        height: 320px;
+    }
+}
