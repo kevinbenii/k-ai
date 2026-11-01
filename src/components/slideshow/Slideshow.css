@@ -1,0 +1,66 @@
+/* Slideshow section */
+.slideshow {
+    padding: 20px 0 60px;
+}
+
+/* Heading */
+.slideshow h2 {
+    font-size: 1.875rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Slide box */
+.slideshow .slides {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: 24px;
+}
+
+/* Controls row */
+.slideshow .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+/* Arrows */
+.slideshow .arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.slideshow .arrow:hover {
+    border-color: var(--color-accent);
+}
+
+/* Dots */
+.slideshow .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+    background: var(--color-border);
+    cursor: pointer;
+}
+
+.slideshow .dot.active {
+    background: var(--color-accent);
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .slideshow .slides {
+        padding: 32px;
+    }
+}
