@@ -10,12 +10,28 @@
     padding: 30px;
 }
 
+/* Image button */
+.profile-card .thumb button {
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+}
+
 /* Image */
-.profile-card img {
+.profile-card .thumb img {
     width: 96px;
     height: 96px;
     border-radius: 14px;
     object-fit: cover;
+}
+
+/* Hint */
+.profile-card .hint {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    margin-top: 6px;
 }
 
 /* Name */
