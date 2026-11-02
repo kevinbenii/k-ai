@@ -5,7 +5,7 @@ import "yet-another-react-lightbox/styles.css";
 
 // Profile card
 const ProfileCard = (props) => {
-    // Lightbox open or closed
+    // Lightbox open or closed (Yet Another React Lightbox)
     const [open, setOpen] = useState(false);
 
     return (
