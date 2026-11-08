@@ -1,0 +1,7 @@
+/* Loading and error message */
+.tool-list-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--color-muted);
+    padding: 40px 0;
+}
