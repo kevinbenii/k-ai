@@ -1,14 +1,11 @@
 import "./CodingAndTechnology.css";
 import PageHero from "../../components/pagehero/PageHero";
 import About from "../../components/about/About";
-import ToolCard from "../../components/toolcard/ToolCard";
+import ToolList from "../../components/toollist/ToolList";
 import CheckItem from "../../components/checkitem/CheckItem";
 import InfoCard from "../../components/infocard/InfoCard";
 import Tip from "../../components/tip/Tip";
 import Button from "../../components/button/Button";
-
-// Images folder
-const images = process.env.PUBLIC_URL + "/images/";
 
 // Coding and Technology page
 const CodingAndTechnology = () => {
@@ -23,8 +20,7 @@ const CodingAndTechnology = () => {
 
             <section className="cat-section">
                 <div className="container tool-grid">
-                    <ToolCard to="/codefixer" image={images + "codefixer.png"} name="Code Fixer" category="Coding and Technology" description="Checks your code." price="Free to try" platform="Web" />
-                    <ToolCard to="/coding" image={images + "debugger.png"} name="Debugger" category="Coding and Technology" description="Finds bugs in your code." price="Free to try" platform="Web" />
+                    <ToolList category="Coding and Technology" />
                 </div>
             </section>
 
