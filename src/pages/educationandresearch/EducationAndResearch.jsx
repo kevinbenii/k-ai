@@ -1,14 +1,11 @@
 import "./EducationAndResearch.css";
 import PageHero from "../../components/pagehero/PageHero";
 import About from "../../components/about/About";
-import ToolCard from "../../components/toolcard/ToolCard";
+import ToolList from "../../components/toollist/ToolList";
 import CheckItem from "../../components/checkitem/CheckItem";
 import InfoCard from "../../components/infocard/InfoCard";
 import Tip from "../../components/tip/Tip";
 import Button from "../../components/button/Button";
-
-// Images folder
-const images = process.env.PUBLIC_URL + "/images/";
 
 // Education and Research page
 const EducationAndResearch = () => {
@@ -23,8 +20,7 @@ const EducationAndResearch = () => {
 
             <section className="cat-section">
                 <div className="container tool-grid">
-                    <ToolCard to="/study" image={images + "study.png"} name="Study" category="Education and Research" description="Turns notes into a study guide." price="Free to try" platform="Web" />
-                    <ToolCard to="/education" image={images + "practice.jpg"} name="Practice" category="Education and Research" description="Makes quizzes for you." price="Free to try" platform="Web" />
+                    <ToolList category="Education and Research" />
                 </div>
             </section>
 
