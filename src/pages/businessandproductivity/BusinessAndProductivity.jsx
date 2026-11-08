@@ -1,14 +1,11 @@
 import "./BusinessAndProductivity.css";
 import PageHero from "../../components/pagehero/PageHero";
 import About from "../../components/about/About";
-import ToolCard from "../../components/toolcard/ToolCard";
+import ToolList from "../../components/toollist/ToolList";
 import CheckItem from "../../components/checkitem/CheckItem";
 import InfoCard from "../../components/infocard/InfoCard";
 import Tip from "../../components/tip/Tip";
 import Button from "../../components/button/Button";
-
-// Images folder
-const images = process.env.PUBLIC_URL + "/images/";
 
 // Business and Productivity page
 const BusinessAndProductivity = () => {
@@ -23,8 +20,7 @@ const BusinessAndProductivity = () => {
 
             <section className="cat-section">
                 <div className="container tool-grid">
-                    <ToolCard to="/task" image={images + "task.jpg"} name="Task" category="Business and Productivity" description="Creates and organizes daily tasks." price="Free to try" platform="Web" />
-                    <ToolCard to="/business" image={images + "report.png"} name="Report" category="Business and Productivity" description="Writes reports for you." price="Free to try" platform="Web" />
+                    <ToolList category="Business and Productivity" />
                 </div>
             </section>
 
