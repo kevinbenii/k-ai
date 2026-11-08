@@ -1,14 +1,11 @@
 import "./WritingAndCreativity.css";
 import PageHero from "../../components/pagehero/PageHero";
 import About from "../../components/about/About";
-import ToolCard from "../../components/toolcard/ToolCard";
+import ToolList from "../../components/toollist/ToolList";
 import CheckItem from "../../components/checkitem/CheckItem";
 import InfoCard from "../../components/infocard/InfoCard";
 import Tip from "../../components/tip/Tip";
 import Button from "../../components/button/Button";
-
-// Images folder
-const images = process.env.PUBLIC_URL + "/images/";
 
 // Writing and Creativity page
 const WritingAndCreativity = () => {
@@ -23,8 +20,7 @@ const WritingAndCreativity = () => {
 
             <section className="cat-section">
                 <div className="container tool-grid">
-                    <ToolCard to="/write" image={images + "write.png"} name="Write" category="Writing and Creativity" description="Helps you write." price="Free to try" platform="Web" />
-                    <ToolCard to="/writing" image={images + "creation.jpg"} name="Creation" category="Writing and Creativity" description="Generates images and videos for you." price="Free to try" platform="Web" />
+                    <ToolList category="Writing and Creativity" />
                 </div>
             </section>
 
