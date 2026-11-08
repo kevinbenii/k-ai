@@ -1,12 +1,9 @@
 import "./AIDirectory.css";
 import PageHero from "../../components/pagehero/PageHero";
 import Chip from "../../components/chip/Chip";
-import ToolCard from "../../components/toolcard/ToolCard";
+import ToolList from "../../components/toollist/ToolList";
 import InfoCard from "../../components/infocard/InfoCard";
 import NumberedCard from "../../components/numberedcard/NumberedCard";
-
-// Images folder
-const images = process.env.PUBLIC_URL + "/images/";
 
 // AI Directory page
 const AIDirectory = () => {
@@ -45,14 +42,7 @@ const AIDirectory = () => {
                 <div className="container">
                     <h2>Popular this week</h2>
                     <div className="card-grid tool-grid">
-                        <ToolCard to="/study" image={images + "study.png"} name="Study" category="Education and Research" description="Turns notes into a study guide." price="Free to try" platform="Web" />
-                        <ToolCard to="/codefixer" image={images + "codefixer.png"} name="Code Fixer" category="Coding and Technology" description="Checks your code." price="Free to try" platform="Web" />
-                        <ToolCard to="/task" image={images + "task.jpg"} name="Task" category="Business and Productivity" description="Creates and organizes daily tasks." price="Free to try" platform="Web" />
-                        <ToolCard to="/write" image={images + "write.png"} name="Write" category="Writing and Creativity" description="Helps you write." price="Free to try" platform="Web" />
-                        <ToolCard to="/education" image={images + "practice.jpg"} name="Practice" category="Education and Research" description="Makes quizzes for you." price="Free to try" platform="Web" />
-                        <ToolCard to="/coding" image={images + "debugger.png"} name="Debugger" category="Coding and Technology" description="Finds bugs in your code." price="Free to try" platform="Web" />
-                        <ToolCard to="/business" image={images + "report.png"} name="Report" category="Business and Productivity" description="Writes reports for you." price="Free to try" platform="Web" />
-                        <ToolCard to="/writing" image={images + "creation.jpg"} name="Creation" category="Writing and Creativity" description="Generates images and videos for you." price="Free to try" platform="Web" />
+                        <ToolList />
                     </div>
                 </div>
             </section>
