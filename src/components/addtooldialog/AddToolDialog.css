@@ -1,0 +1,180 @@
+/* Dark background behind the form */
+.add-tool-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(5, 7, 15, 0.8);
+}
+
+/* Form box */
+.add-tool {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    max-height: 92vh;
+    overflow-y: auto;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--color-accent);
+    border-radius: 20px;
+    padding: 28px 22px;
+}
+
+/* Heading */
+.add-tool h2 {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+.add-tool .intro {
+    color: var(--color-muted);
+    font-size: 0.9375rem;
+    margin-bottom: 22px;
+}
+
+/* Close button */
+.add-tool .close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Form layout */
+.add-tool form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.add-tool .row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Field */
+.add-tool .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.add-tool label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-muted);
+}
+
+.add-tool .hint {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+}
+
+/* Inputs */
+.add-tool input,
+.add-tool select,
+.add-tool textarea {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 11px 13px;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+}
+
+.add-tool input:focus,
+.add-tool select:focus,
+.add-tool textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.add-tool textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Image picker and preview */
+.add-tool .image-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.add-tool .preview {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px dashed var(--color-border);
+    background: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-muted);
+    font-size: 0.75rem;
+    overflow: hidden;
+}
+
+.add-tool .preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Buttons */
+.add-tool .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.add-tool .actions button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.add-tool .actions .btn-secondary {
+    background: transparent;
+    color: var(--color-text);
+}
+
+/* Result message */
+.add-tool .result {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.add-tool .result.success {
+    color: #2e9e6b;
+}
+
+.add-tool .result.error {
+    color: #e5484d;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 768px) {
+    .add-tool {
+        padding: 32px;
+    }
+
+    .add-tool .row {
+        flex-direction: row;
+    }
+}
