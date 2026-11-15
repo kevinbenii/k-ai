@@ -42,7 +42,7 @@ const AIDirectory = () => {
                 <div className="container">
                     <h2>Popular this week</h2>
                     <div className="card-grid tool-grid">
-                        <ToolList />
+                        <ToolList canAdd />
                     </div>
                 </div>
             </section>
