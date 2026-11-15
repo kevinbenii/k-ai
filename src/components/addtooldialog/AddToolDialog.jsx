@@ -1,5 +1,6 @@
 import "./AddToolDialog.css";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import axios from "axios";
 
 // Categories (same as the server)
@@ -82,7 +83,7 @@ const AddToolDialog = (props) => {
         }
     };
 
-    return (
+    return createPortal(
         <div className="add-tool-overlay" onClick={props.close}>
             <div className="add-tool" role="dialog" aria-label="Add a tool" onClick={(event) => event.stopPropagation()}>
                 <button type="button" className="close" onClick={props.close} aria-label="Close">&times;</button>
@@ -142,7 +143,8 @@ const AddToolDialog = (props) => {
                     {result && <p className={"result " + status} role="status">{result}</p>}
                 </form>
             </div>
-        </div>
+        </div>,
+        document.body
     );
 };
 

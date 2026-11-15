@@ -1,5 +1,6 @@
 import "./ToolDialog.css";
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";
 
 // Tool details dialog
@@ -17,7 +18,7 @@ const ToolDialog = (props) => {
         return () => document.removeEventListener("keydown", onKey);
     }, [props]);
 
-    return (
+    return createPortal(
         <div className="tool-dialog-overlay" onClick={props.close}>
             {/* Clicks inside the box don't close it */}
             <div className="tool-dialog" role="dialog" aria-label={tool.name} onClick={(event) => event.stopPropagation()}>
@@ -41,7 +42,8 @@ const ToolDialog = (props) => {
 
                 <Link to={tool.link} className="btn btn-primary" onClick={props.close}>Learn more &rarr;</Link>
             </div>
-        </div>
+        </div>,
+        document.body
     );
 };
 
