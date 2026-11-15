@@ -2,6 +2,7 @@ import "./ToolList.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ToolCard from "../toolcard/ToolCard";
+import ToolDialog from "../tooldialog/ToolDialog";
 
 // K·AI server on Render
 const server = "https://setup-qe5y.onrender.com";
@@ -10,6 +11,9 @@ const server = "https://setup-qe5y.onrender.com";
 const ToolList = (props) => {
     const [tools, setTools] = useState([]);
     const [message, setMessage] = useState("Loading tools...");
+
+    // Tool that was clicked (null = no dialog)
+    const [selected, setSelected] = useState(null);
 
     // Get the tools once when the page loads
     useEffect(() => {
@@ -44,14 +48,21 @@ const ToolList = (props) => {
             {shown.map((tool) => (
                 <ToolCard
                     key={tool._id}
-                    to={tool.link}
                     image={server + "/" + tool.img_name}
                     name={tool.name}
                     category={tool.category}
                     description={tool.description}
                     price={tool.price}
-                    platform={tool.platform} />
+                    platform={tool.platform}
+                    onClick={() => setSelected(tool)} />
             ))}
+
+            {selected && (
+                <ToolDialog
+                    tool={selected}
+                    image={server + "/" + selected.img_name}
+                    close={() => setSelected(null)} />
+            )}
         </>
     );
 };
