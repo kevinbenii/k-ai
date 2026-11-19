@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import ToolCard from "../toolcard/ToolCard";
 import ToolDialog from "../tooldialog/ToolDialog";
-import AddToolDialog from "../addtooldialog/AddToolDialog";
+import ToolForm from "../toolform/ToolForm";
+import DeleteToolDialog from "../deletetooldialog/DeleteToolDialog";
 
 // K·AI server on Render
 const server = "https://setup-qe5y.onrender.com";
@@ -18,6 +19,10 @@ const ToolList = (props) => {
 
     // Add a tool form open or closed
     const [showAdd, setShowAdd] = useState(false);
+
+    // Tool being edited or deleted (null = none)
+    const [editing, setEditing] = useState(null);
+    const [deleting, setDeleting] = useState(null);
 
     // Get the tools once when the page loads
     useEffect(() => {
@@ -35,6 +40,27 @@ const ToolList = (props) => {
     // New tool from the server goes into the list right away
     const addTool = (tool) => {
         setTools((current) => [...current, tool]);
+    };
+
+    // Edited tool from the server replaces the old one right away
+    const updateTool = (updated) => {
+        setTools((current) => current.map((tool) => (tool._id === updated._id ? updated : tool)));
+    };
+
+    // Deleted tool comes out of the list right away
+    const removeTool = (id) => {
+        setTools((current) => current.filter((tool) => tool._id !== id));
+    };
+
+    // Open the edit form or delete box from the details dialog
+    const startEdit = () => {
+        setEditing(selected);
+        setSelected(null);
+    };
+
+    const startDelete = () => {
+        setDeleting(selected);
+        setSelected(null);
     };
 
     // Only one category (if given)
@@ -79,14 +105,32 @@ const ToolList = (props) => {
                 <ToolDialog
                     tool={selected}
                     image={server + "/" + selected.img_name}
+                    onEdit={startEdit}
+                    onDelete={startDelete}
                     close={() => setSelected(null)} />
             )}
 
             {showAdd && (
-                <AddToolDialog
+                <ToolForm
                     server={server}
-                    addTool={addTool}
+                    onSaved={addTool}
                     close={() => setShowAdd(false)} />
+            )}
+
+            {editing && (
+                <ToolForm
+                    server={server}
+                    tool={editing}
+                    onSaved={updateTool}
+                    close={() => setEditing(null)} />
+            )}
+
+            {deleting && (
+                <DeleteToolDialog
+                    server={server}
+                    tool={deleting}
+                    onDeleted={removeTool}
+                    close={() => setDeleting(null)} />
             )}
         </>
     );
