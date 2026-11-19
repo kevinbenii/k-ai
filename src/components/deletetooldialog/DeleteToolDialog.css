@@ -1,0 +1,86 @@
+/* Dark background behind the box */
+.delete-tool-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(5, 7, 15, 0.8);
+}
+
+/* Confirm box */
+.delete-tool {
+    width: 100%;
+    max-width: 420px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid #e5484d;
+    border-radius: 20px;
+    padding: 28px 24px;
+    text-align: center;
+}
+
+/* Tool image */
+.delete-tool img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: var(--color-bg);
+    border-radius: 12px;
+    padding: 6px;
+    margin: 0 auto 16px;
+}
+
+/* Heading */
+.delete-tool h2 {
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+}
+
+.delete-tool p {
+    color: var(--color-muted);
+    font-size: 0.9375rem;
+}
+
+/* Buttons */
+.delete-tool .actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.delete-tool .actions button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.delete-tool .btn-danger {
+    background: #e5484d;
+    color: var(--color-text);
+}
+
+.delete-tool .btn-danger:hover {
+    background: #f05a5f;
+}
+
+.delete-tool .btn-secondary {
+    background: transparent;
+    color: var(--color-text);
+}
+
+/* Result message */
+.delete-tool .result {
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.delete-tool .result.success {
+    color: #2e9e6b;
+}
+
+.delete-tool .result.error {
+    color: #e5484d;
+}
