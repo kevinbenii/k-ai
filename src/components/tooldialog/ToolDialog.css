@@ -100,6 +100,31 @@
     font-weight: 700;
 }
 
+/* Buttons */
+.tool-dialog .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tool-dialog .actions button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.tool-dialog .btn-secondary {
+    background: transparent;
+    color: var(--color-text);
+}
+
+.tool-dialog .btn-secondary.delete {
+    color: #e5484d;
+}
+
+.tool-dialog .btn-secondary.delete:hover {
+    border-color: #e5484d;
+}
+
 /* Larger screens */
 @media only screen and (min-width: 768px) {
     .tool-dialog {

@@ -40,7 +40,11 @@ const ToolDialog = (props) => {
                     </div>
                 </div>
 
-                <Link to={tool.link} className="btn btn-primary" onClick={props.close}>Learn more &rarr;</Link>
+                <div className="actions">
+                    <Link to={tool.link} className="btn btn-primary" onClick={props.close}>Learn more &rarr;</Link>
+                    <button type="button" className="btn btn-secondary" onClick={props.onEdit}>Edit</button>
+                    <button type="button" className="btn btn-secondary delete" onClick={props.onDelete}>Delete</button>
+                </div>
             </div>
         </div>,
         document.body
